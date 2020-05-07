@@ -1,0 +1,37 @@
+div{
+    text-align: center;
+}
+form{
+    
+    
+    
+    /* background-color:rgb(187, 82, 248);
+    text-emphasis-color: white;*/ */
+}
+h1{
+    text-align: center;
+    color:#8338EA;
+    font-family: Cambria;
+}
+p{
+    color: white;
+}
+.tab{
+    background-color: #8338EA;
+    border-radius: 25px;
+
+}
+.sr{
+    padding-right: 150px;
+}
+.t2{
+    color: #8338EA;
+    text-align: center;
+}
+.t1{
+    text-align: center;
+    color: rgb(19, 153, 14);
+}
+.tick{
+    padding-top: 70px;
+}

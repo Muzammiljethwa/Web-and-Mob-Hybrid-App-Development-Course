@@ -1,0 +1,88 @@
+.intro{
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    font-family:  'Trebuchet MS', sans-serif;
+    background-color: darkorchid;
+    color: white;
+    box-shadow: black ;
+}
+.h{
+    float: left;
+    text-align: center;
+   
+}
+.h22{
+    
+    text-align: center;
+    align:center;
+
+}
+.h22 h1{
+    float: left;
+    text-align: center;
+    padding-left: 140px;
+}
+header{
+    
+    height:90px;
+    border-radius: 5px;
+    background-color:rgba(101, 119, 170, 0.801);
+    align-self: center;
+   
+}
+
+header h1{
+    text-align: center;
+    margin-top: 0px;
+    color: white;
+}
+#headerheading{
+    padding-top: 25px;
+}
+body{}
+
+footer{
+    height: 70px;
+    background-color:rgb(39, 34, 34);
+    margin-top: 300px;
+    color: white;
+    text-align: center;
+}
+footer p{
+    color: white;
+   padding-top: 27px;
+}
+.assignment1{
+    background-color: forestgreen;
+    height: 130px;
+    width: 150px;
+    border: solid black 1.5px;
+    border-radius: 25px;
+    margin:auto; 
+    color: white;
+    
+     
+}
+.assignmenthead{
+    height: 200px;
+    width: 200px;
+    margin-left: 15px;
+    float: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.mainselec{
+    margin-top: 30px;
+    text-align: center;
+    color: maroon;
+    align: center;
+}
+.aht1{
+    padding-top:25px;
+}
+.aht2{
+padding-top: 15px;
+}
