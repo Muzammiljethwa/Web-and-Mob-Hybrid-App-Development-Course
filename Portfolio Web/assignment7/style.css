@@ -44,6 +44,11 @@ header h2{
     font-size: 35px;
     border: 1.5px solid rgb(56, 55, 55);
 }
+.calculator img{
+    width: 20px ;
+    text-align: center;
+    margin: 0 auto;
+}
 .btn{
     margin-top: 15px;
     text-align: center;
