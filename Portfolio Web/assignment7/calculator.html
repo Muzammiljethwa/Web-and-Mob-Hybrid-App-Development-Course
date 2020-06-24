@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h2>Calculator With History</h2>
+    </header>
+    <section>
+        <div class="calculator">
+            <input type="text" id="input"><br>
+
+            <span>
+                <button class="btn" style="width: 55%; " onclick="empty()">C</button>
+                <button class="btn" style="width: 40%; " onclick="backspace()" ><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
+            </span><br>
+
+            <span>
+                <button class="btn" onclick='getNumber("7")'>7</button>
+                <button class="btn" onclick='getNumber("8")'>8</button>
+                <button class="btn" onclick='getNumber("9")'>9</button>
+                <button class="btn" onclick='getNumber("*")'>x</button>
+            </span><br>
+
+            <span>
+                <button class="btn" onclick='getNumber("4")'>4</button>
+                <button class="btn" onclick='getNumber("5")'>5</button>
+                <button class="btn" onclick='getNumber("6")'>6</button>
+                <button class="btn" onclick='getNumber("-")'>-</button>
+            </span><br>
+
+            <span>
+                <button class="btn" onclick='getNumber("3")'>3</button>
+                <button class="btn" onclick='getNumber("2")'>2</button>
+                <button class="btn" onclick='getNumber("1")'>1</button>
+                <button class="btn" onclick='getNumber("+")'>+</button>
+            </span><br>
+
+            <span>
+                <button class="btn" onclick='getNumber("0")'>0</button>
+                <button class="btn" onclick='result()'>=</button>
+                <button class="btn" onclick='getNumber(".")'>.</button>
+                <button class="btn" onclick='getNumber("/")'>÷</button>
+            </span>
+        </div>
+        <div class="history">
+            <ul id = 'List'>
+                <li>
+                    <p id="eq">Equation</p>
+                </li>
+                <li>
+                    <p id="ans">= Answer</p><hr>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+<script src="app.js"></script>
+</html>
