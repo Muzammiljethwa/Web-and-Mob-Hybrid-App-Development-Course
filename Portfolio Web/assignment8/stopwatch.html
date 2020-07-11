@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Stop Watch</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="controls">
+            <button class="start" onclick="start()">Start</button>
+            <button class="pause" onclick="pause()">Pause</button>
+            <button class="grey" onclick="stop()">Stop</button>
+            <button class="restart" onclick="restart()">Restart</button>
+            <button class="grey" onclick="lap()">Lap</button>
+            <button class="grey" onclick="resetLaps()">Reset Laps</button>
+        </div>
+        <div class="stopwatch">00:00:00</div>
+        <ul class="laps"></ul>
+    </body>
+    <script type="text/javascript" src="./app.js"></script>
+</html>
