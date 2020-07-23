@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tasks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+     <!-- Chapter 38-43 Question # 1 -->
+     <div class="d-flex">
+     <a href="#" onclick="alert('You have Purchased Mobile!')">Mobile</a>
+
+     <!-- Chapter 38-43 Question # 2 -->
+     <img id="swapPic" src="images/mobile.png" onclick="alert('You have Purchased Mobile!')" width="600" height="400">
+     <br><br>
+    </div>
+     <!-- Chapter 38-43 Question # 4 -->
+
+     <img id="swapPic" src="images/1.jpg" onmouseover="src='images/2.jpg'" onmouseout="src='images/1.jpg'" width="600" height="400">
+     <br><br><br>
+ 
+ 
+     <!-- Chapter 38-43 Question # 5 -->
+ 
+     <button onclick="increment()">Increment</button>
+     <h2 id="counter">0</h2>
+     <button onclick="decrement()">Decrement</button>
+
+
+    <!-- Chapter 49-52 Question # 1 -->
+        <br><br><br><br><h2>Form Task</h2>
+     <form action="" method="get">
+         <table>
+             <tr>
+                <th>Name</th>
+                 <td><input type="text" name="name" id="name" required placeholder="Enter Name..."></td>
+             </tr>
+             <tr>
+                <th>Email</th>
+                 <td><input type="email" name="email1" id="email1" required placeholder="Enter Email..."></td>
+                 
+             </tr>
+             <tr>
+                 <th>Password</th>
+                 <td><input type="password" name="password" id="password" required placeholder="Enter Password..."></td>
+             </tr>
+             <tr>
+                 <td colspan="2"><button>Sign Up</button></td>
+             </tr>
+         </table>
+     </form>
+     <div>
+         <table>
+             <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+             </tr>
+             <tr>
+                 <td id="namef"></td>
+                 <td id="emailf"></td>
+                 <td id="passf"></td>
+             </tr>
+         </table>
+     </div>
+
+    <!-- Chapter 49-52 Question # 2 -->
+    <div>
+        <h2>Read More Read Less Button</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more" style="display: none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+        <button onclick="LoadMore()" id="LoadBtn">Read more</button>
+    </div>
+
+
+
+    <!--<script src="app.js"></script>-->
+    <section>
+        <div id="tblData"></div>
+        <h3>Table Data</h3>
+        <table>
+                <tr>
+                    <th>Name</th>
+                    <td><input type="text" name="stdName" id="stdName"></td>
+                </tr>
+                <tr>
+                    <th>Class</th>
+                    <td><input type="text" name="stdClass" id="stdClass"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button onclick="addData()">Add Data</button>
+                    </td>
+                </tr>
+        </table>
+    </section>
+
+    <section>
+        <div>
+            <h1> DOM </h1>
+            <div id="form-content" class="content">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" />
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" />
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+            </div>
+            <div id="main-content" class="content">
+                <p class="render"> First Name : Alex</p>
+                <p class="render" id="lastName">Last Name: Bank</p>
+                <p class="render"> Email : alexbank@example.com</p>
+                <p class="render"> Country : Pakistan </p>
+                <p class="render"> contact : +92 300 1234567</p>
+            </div>
+        </div>
+        <div id="disply"></div>  
+        <div id="displyinner"></div>  
+        <div id="nodetps"></div>          
+    </section>
+    <script>
+        //49-52 Question 1
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var name = url.searchParams.get("name");
+        var email = url.searchParams.get("email1");
+        var pass = url.searchParams.get("password");
+        document.getElementById("namef").innerHTML = name;
+        document.getElementById("emailf").innerHTML = email;
+        document.getElementById("passf").innerHTML = pass;
+
+        function increment() {
+            var counter = Number(document.getElementById('counter').innerHTML);
+            counter += 1;
+            var updated_Counter = document.getElementById('counter').innerHTML = counter;
+        }
+        function decrement() {
+            var counter = Number(document.getElementById('counter').innerHTML);
+            counter -= 1;
+            var updated_Counter = document.getElementById('counter').innerHTML = counter;
+        }
+        //49-52 Question 2
+        function LoadMore() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("LoadBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more"; 
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less"; 
+                moreText.style.display = "inline";
+            }
+        }
+        persons = [
+	        {name: "Basit", class: "10th"},
+            {name: "Muzammil", class: "10th"},
+            {name: "Bilal", class: "10th"},
+        ]
+        LoadTableData();
+        
+        function LoadTableData()
+        {
+            var html = "<table><tr><th>Index</th><th>Name</th><th>Class</th><th></th></tr>";
+            for (var i = 0; i < persons.length ; i++)
+            {
+            html += "<tr>";
+            html += "<td>" + i + "</td>";
+            html += "<td>" + persons[i].name + "</td>";
+            html += "<td>" + persons[i].class + "</td>";
+            html += "<td><button onClick='func("+i+")'>Delete</button></td>";
+            html += "</tr>"
+            }
+            html += "</table>";
+            document.getElementById("tblData").innerHTML = html;
+        }
+        
+       function func(id)
+        {
+	        persons.splice(id,1);
+            LoadTableData();
+            
+        }
+        //49-52 Question 3
+
+        function addData()
+        {
+            var name = document.getElementById("stdName").value;
+            var cass = document.getElementById("stdClass").value;;
+            persons.push({name: name, class: cass});
+            LoadTableData();
+            document.getElementById("stdName").value = "";
+            document.getElementById("stdClass").value = "";
+        }
+
+        //58-67 Question 1
+        // i)
+        var main = document.getElementById("main-content").children;
+
+        // ii)
+        var txt = "";
+        for (i = 0; i < main.length; i++) {
+            txt = txt + main[i].tagName + "<br>";
+        }
+        document.getElementById("disply").innerHTML = txt + "<br><br>";
+
+        // iii)
+        var ele = document.getElementsByClassName("render");
+        var txt = "";
+        for (i = 0; i < ele.length; i++) {
+            txt = txt + ele[i].innerHTML + "<br>";
+        }
+        document.getElementById("displyinner").innerHTML = txt;
+
+        // iv)
+        document.getElementById("first-name").value = "Muhammad Basit (filled through JS)";
+
+        // v)
+        document.getElementById("last-name").value = "Mukhtar (filled through JS)";
+        document.getElementById("email").value = "basit@gmailbyJS.com";
+
+        //58-67 Question 2
+        // i)
+        node_of_form = document.getElementById("form-content").nodeType;
+        last = document.getElementById("lastName");
+        node_of_last = last.nodeType;
+        node_child = last.childNodes[0].nodeType;
+        txt = "";
+        if(node_of_form == 1)
+        {
+            txt += "<br>form-element = " + node_of_form + " which is Element Node <br><br>";
+        }
+
+        // ii)
+        if(node_of_last == 1)
+        {
+            txt += "lastName = " + node_of_last + " which is Element Node <br>";
+            txt += "child of lastName = " + node_child + " which is Text Node <br><br>";
+        }
+
+        // iii)
+        var textnode = document.createTextNode("Last Name: Ahmed");
+        var item = last;
+        item.replaceChild(textnode, last.childNodes[0]);
+
+        // iv)
+        txt += "First child of main-content : " + document.getElementById("main-content").firstChild.nodeName + "<br>";
+        txt += "Last child of main-content : " + document.getElementById("main-content").lastChild.nodeName + "<br><br>";
+
+        // v)
+        txt += "Next Sibling of lastName : " + document.getElementById("lastName").nextSibling.nodeName + "<br>";
+        txt += "Previous Sibling of lastName : " + document.getElementById("lastName").previousSibling.nodeName + "<br><br>";
+
+        // vi)
+        txt += "Parent Node of email : " + document.getElementById("email").parentNode.nodeName + "<br>";
+        txt += "Node Type of email : " + document.getElementById("email").nodeType + " which is Element Node<br>";
+        document.getElementById("nodetps").innerHTML = txt;
+    </script>
+</body>
+</html>
