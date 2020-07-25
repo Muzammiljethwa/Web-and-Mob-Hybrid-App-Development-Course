@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1><u> TODO APP </u></h1>
+
+    <div class="todo">
+        <input type="text" name="" id="todo-item"><br>
+        <button class="add-btn" onclick="addItem()">Add Item</button>
+        <button class="del-all-btn" onclick="delAll()">Delete All</button>
+    </div>
+
+    <div class="items">
+        <ul id="list">
+            <li>
+                 Item  
+                <span class="span-2">
+                <button class="del-btn" onclick="delItem(this)">Delete</button>
+                <button class="edit-btn" onclick="edit_item(this)">Edit</button>
+                </span>
+                <hr>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+<script src="./app.js"></script>
+</html>
